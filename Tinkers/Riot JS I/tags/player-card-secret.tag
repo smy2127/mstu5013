@@ -1,4 +1,4 @@
-<player-card-secret class="card">
+<player-card-secret class="card"> <!-- class card is so that it follows the bootstrap model -->
 	<div class="card-header">
 		<strong>{ name }</strong>
 	</div>
