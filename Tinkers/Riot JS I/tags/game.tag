@@ -104,7 +104,8 @@
 
   <script>
     // JAVASCRIPT
-		let tag = this;
+		let tag = this; 
+		console.log(this);
 
 		const endWWII = new Date('September 02, 1945');
 		const today = new Date();
