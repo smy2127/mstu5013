@@ -9,7 +9,7 @@
   <script>
     // JAVASCRIPT
     let tag = this;
-
+		console.log (this)
 		this.doneTodos = getDoneCount(opts.todos);
 
 		onEnter(event) {
@@ -34,8 +34,10 @@
 		}
 
 		observer.on('todo:removeQueued', () => {
+			debugger;
 			this.doneTodos = getDoneCount(opts.todos);
 			this.update();
+
 		});
 
   </script>
