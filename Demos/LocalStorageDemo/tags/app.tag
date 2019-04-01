@@ -118,12 +118,12 @@
 
 			fetch('http://treasure.chrisproctor.net/players/' + pid).then(response => {
 				return response.json();
-			}).then(playerData => {
+			}).then(playerData => { //then = fetch it and then do this with the data.
 				this.username = playerData.name;
 				this.userID = playerData.pid;
 				this.refs.pid.value = "";
 				this.updateJSON(playerData);
-				this.update();
+				this.update(); //timelag hence you need to manually update the information - because of ascynchronous actions 
 			}).catch(error => {
 				alert('Error');
 			});
