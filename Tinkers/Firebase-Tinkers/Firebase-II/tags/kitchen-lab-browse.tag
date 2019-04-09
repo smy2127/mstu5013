@@ -13,7 +13,7 @@
 		<h4><button class="joinBtn">JOIN LAB</button> { lab.name }</h4>
 	</div>
 
-	<p hide={ labs.length > 0 }>No Labs Found...</p>
+	<p hide={ labs.length > 0 }>No Labs Found...</p>che
 
 
   <script>
@@ -22,15 +22,19 @@
 		this.mode = "all";
 		this.labs = [];
 
-		let stopListening;
+//declaring the variable stopListening
+		let stopListening; 
 		let queryAll = database.collection('kitchen-labs').limit(10);
 		let queryMine = database.collection('kitchen-users').doc(this.user.username).collection('labs').limit(10);
+//queryAll to queryMine is a change of query - 
+
 
 		setMode(event) {
 			this.mode = this.refs.mode.value;
 			this.changeQuery();
 		}
 
+//if the mode is me, use queryMine, if the mode is all use queryAll, if anything elsee, use the queryAll with more specificity //
 		changeQuery() {
 			stopListening();
 
